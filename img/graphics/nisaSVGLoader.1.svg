@@ -1,0 +1,54 @@
+<svg class="ldt-blank" width="280px"  height="100px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="background: none;"><style type="text/css">path,ellipse,circle,rect,polygon,polyline,line { stroke-width: 0; }
+@keyframes ld-wander-px-h {
+  0% {
+    -webkit-transform: translate(-35px, 0);
+    transform: translate(-35px, 0);
+  }
+  50% {
+    -webkit-transform: translate(35px, 0);
+    transform: translate(35px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-35px, 0);
+    transform: translate(-35px, 0);
+  }
+}
+@-webkit-keyframes ld-wander-px-h {
+  0% {
+    -webkit-transform: translate(-35px, 0);
+    transform: translate(-35px, 0);
+  }
+  50% {
+    -webkit-transform: translate(35px, 0);
+    transform: translate(35px, 0);
+  }
+  100% {
+    -webkit-transform: translate(-35px, 0);
+    transform: translate(-35px, 0);
+  }
+}
+.ld.ld-wander-px-h {
+  -webkit-animation: ld-wander-px-h 1s infinite ease-out;
+  animation: ld-wander-px-h 1s infinite ease-out;
+}
+
+@font-face {
+  font-family: "Varela Round";
+}
+text { font-family: "Varela Round" }</style><g transform="translate(89.765625 67.4)" style="opacity: 1;">
+  <g style="animation-delay: 0s; animation-duration: 1.9s; font-size: 48px; animation-direction: normal; transform-origin: 19.2656px 0px 0px;" class="ld ld-wander-px-h">
+    <text fill="#0051a2" style="font-family:Varela Round">N</text>
+  </g>
+</g><g transform="translate(128.296875 67.4)" style="opacity: 1;">
+  <g style="animation-delay: -0.25s; animation-duration: 1.9s; font-size: 48px; animation-direction: normal; transform-origin: 5.96875px 0px 0px;" class="ld ld-wander-px-h">
+    <text fill="#1b75be" style="font-family:Varela Round">i</text>
+  </g>
+</g><g transform="translate(140.234375 67.4)" style="opacity: 1;">
+  <g style="animation-delay: -0.5s; animation-duration: 1.9s; font-size: 48px; animation-direction: normal; transform-origin: 11.5156px 0px 0px;" class="ld ld-wander-px-h">
+    <text fill="#408ee0" style="font-family:Varela Round">s</text>
+  </g>
+</g><g transform="translate(163.265625 67.4)" style="opacity: 1;">
+  <g style="animation-delay: -0.75s; animation-duration: 1.9s; font-size: 48px; animation-direction: normal; transform-origin: 13.4844px 0px 0px;" class="ld ld-wander-px-h">
+    <text fill="#89bff8" style="font-family:Varela Round">a</text>
+  </g>
+</g></svg>

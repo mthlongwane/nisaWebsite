@@ -66,7 +66,7 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact-form" name="contact-form" action="/nisaWebsite/mail.php" method="POST">
 
                 <!--Grid row-->
                 <div class="row">
@@ -74,7 +74,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control white-text">
                             <label for="name" class="white-text">Your name</label>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                            <input type="text" id="email" name="email" class="form-control white-text">
                             <label for="email" class="white-text">Your email</label>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
+                            <input type="text" id="subject" name="subject" class="form-control white-text">
                             <label for="subject" class="white-text">Subject</label>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea white-text"></textarea>
                             <label for="message" class= "white-text">Your message</label>
                         </div>
 
@@ -123,7 +123,7 @@
             <div class="text-center text-md-left">
                 <a class="btn btn-primary" onclick="validateForm()">Send</a>
             </div>
-            <div class="status"></div>
+            <div id = "status" class="status red-text" ></div>
         </div>
         <!--Grid column-->
 
@@ -311,7 +311,30 @@
                 return false;
             }
             document.getElementById('status').innerHTML = "Sending...";
-            document.getElementById('contact-form').submit();
+formData = {
+    'name'     : $('input[name=name]').val(),
+    'email'    : $('input[name=email]').val(),
+    'subject'  : $('input[name=subject]').val(),
+    'message'  : $('textarea[name=message]').val()
+};
+
+
+$.ajax({
+url : "mail.php",
+type: "POST",
+data : formData,
+success: function(data, textStatus, jqXHR)
+{
+
+    $('#status').text(data.message);
+    if (data.code) //If mail was sent successfully, reset the form.
+    $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+},
+error: function (jqXHR, textStatus, errorThrown)
+{
+    $('#status').text(jqXHR);
+}
+});
         
         }
     </script>
